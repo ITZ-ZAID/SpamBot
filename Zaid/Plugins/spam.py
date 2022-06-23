@@ -6,6 +6,8 @@ from pyrogram.types import Message, User
 
 @Client.on_message(filters.command('spam'))
 async def spam(client: Client, message: Message):
+    if not message.command[1]:
+        await message.reply_text("Usage: \n\n/spam <count> message")
     quantity = message.command[1]
     spam_text = ' '.join(message.command[2:])
     quantity = int(quantity)
