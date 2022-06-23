@@ -1,3 +1,1 @@
-"""
-First Commit
-"""
+"""First Commit"""
