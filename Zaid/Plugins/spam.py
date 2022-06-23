@@ -15,9 +15,9 @@ async def spam(client: Client, message: Message):
         for _ in range(quantity):
             await client.send_message(message.chat.id, spam_text,
                                       reply_to_message_id=reply_to_id)
-            await asyncio.sleep(0.000001)
+            await asyncio.sleep(0.1)
         return
 
     for _ in range(quantity):
         await client.send_message(message.chat.id, spam_text)
-        await asyncio.sleep(0.0000001)
+        await asyncio.sleep(0.1)
