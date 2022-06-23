@@ -17,7 +17,7 @@ def ReplyCheck(message: Message):
 
 
 
-@Client.on_message(filters.command("spam", ".") & filters.me)
+@Client.on_message(filters.command("spam", "!"))
 async def spam(bot: Client, message: Message):
     # Get current chat and spam to there.
     # if in group and replied to user, then spam replying to user.
